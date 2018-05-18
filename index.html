@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 
 	<meta charset="utf-8">
 
-	<title>Title</title>
-	<meta name="description" content="">
+	<title>Cleoo Marketing</title>
+	<meta name="description" content="Smart marketing for your education business">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,7 +17,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
-
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -60,7 +60,7 @@
 				</div>
 				<div class="form-sect__select-group">
 					<select name="test" id="test" class="form-sect__select">
-						<option disabled selected hidden>Choose your Campaign Request Details</option>
+						<option disabled selected hidden>Choose Campaign Request Details</option>
 						<option value="1">Test Details 1</option>
 						<option value="2">Test Details 2</option>
 						<option value="3">Test Details 3</option>
@@ -72,20 +72,23 @@
 				</div>
 				<div class="form-sect__checkbox-group">
 					<div class="form-sect__custom-checkbox">
-			      <input type="checkbox" value="None" id="main-form-check-1" name="check"/>
-			      <label for="main-form-check-1"></label>
-			    </div>
+				      <input type="checkbox" value="None" id="main-form-check-1" name="check"/>
+				      <label for="main-form-check-1"></label>
+				    </div>
 					<label for="main-form-check-1" class="form-sect__checkbox-descr">I agree to the Cleoo <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
 				</div>
 				<div class="form-sect__checkbox-group form-sect__checkbox-group--custom-margin">
 					<div class="form-sect__custom-checkbox">
-			      <input type="checkbox" value="None" id="main-form-check-2" name="check"/>
-			      <label for="main-form-check-2"></label>
-			    </div>
+				      <input type="checkbox" value="None" id="main-form-check-2" name="check"/>
+				      <label for="main-form-check-2"></label>
+				    </div>
 					<label for="main-form-check-2" class="form-sect__checkbox-descr">Cleoo may use my account to personalize +1’s on content</label>
-				</div>
-				<a href="#" class="form-sect__cta-btn">Learn More</a>
-			</form>
+        		</div>
+		        <div class="form-last-row">
+		          <div class="g-recaptcha" data-sitekey="6LfG4VkUAAAAAOr6WvwYJd_l21AyAut2wu2J7rzB"></div>
+		          <button class="form-sect__cta-btn" type="submit">Learn More</button>
+		        </div>
+      		</form>
 		</div>
 	</section>
 
@@ -111,8 +114,8 @@
 					<img src="img/point-pic1.jpg" alt="Point Picture">
 				</div>
 				<div class="points-sect__card-description">
-					<h3 class="points-sect__card-description-title">Marketing driven <br> by data & AI</h3>
-					<p class="points-sect__card-description-text">Our intelligent solution focuses on <br> your best-performing ads to drive <br> more traffic to your business</p>
+					<h3 class="points-sect__card-description-title">Marketing driven by data & AI</h3>
+					<p class="points-sect__card-description-text">Our intelligent solution focuses on your best-performing ads to drive more traffic to your business</p>
 				</div>
 			</div>
 			<div class="points-sect__card points-sect__card--changed-order">
@@ -120,8 +123,8 @@
 					<img src="img/point-pic2.jpg" alt="Point Picture">
 				</div>
 				<div class="points-sect__card-description">
-					<h3 class="points-sect__card-description-title">Help and support <br> from the best</h3>
-					<p class="points-sect__card-description-text">Our Singapore-based team will guide you <br> through the process so you know exactly <br> what's working</p>
+					<h3 class="points-sect__card-description-title">Help and support from the best</h3>
+					<p class="points-sect__card-description-text">Our Singapore-based team will guide you through the process so you know exactly  what's working</p>
 				</div>
 			</div>
 			<div class="points-sect__card points-sect__card--third">
@@ -129,8 +132,8 @@
 					<img src="img/point-pic3.jpg" alt="Point Picture">
 				</div>
 				<div class="points-sect__card-description">
-					<h3 class="points-sect__card-description-title">Get guaranteed <br> results</h3>
-					<p class="points-sect__card-description-text">We run your ads until they beat Google's <br> visitor estimates, to give you superior <br> value for money</p>
+					<h3 class="points-sect__card-description-title">Get guaranteed results</h3>
+					<p class="points-sect__card-description-text">We run your ads until they beat Google's visitor estimates, to give you superior value for money</p>
 				</div>
 			</div>
 			<a href="#" class="points-sect__card-cta-btn">Call now</a>
@@ -145,6 +148,13 @@
 	</footer>
 
 	<script src="js/scripts.min.js"></script>
+  <script>
+    function recaptcha_callback(){
+      if (validate()) {
+        $('.form-sect__cta-btn').attr('disabled', false)
+      }
+    }
+  </script>
 
 </body>
 </html>
